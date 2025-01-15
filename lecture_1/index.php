@@ -74,6 +74,7 @@ if ($numPosts == 3) {
     } ?>
     <h3><?= $posts[$i]['title'] ?></h3>
     <p><?= $posts[$i]['content'] ?></p>
+    <p><?= $posts[$i]['author']->firstName ?></p>
 <?php endfor; ?>
 
 <?php for ($i = 0; $i < $numPosts; $i++) {
