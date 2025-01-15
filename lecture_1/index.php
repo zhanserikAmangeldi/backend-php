@@ -44,3 +44,6 @@ if ($numPosts == 3) {
 <?php else: ?>
     There are no posts
 <?php endif; ?>
+
+<?php echo $hasPosts ? 'Post exists' : 'There are no posts'; ?>
+<?php echo ($numPosts == 3) ? 'There are exactly 3 posts' : ($hasPosts ? 'Post exists' : 'There are no posts'); ?>
