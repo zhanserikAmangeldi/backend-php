@@ -5,17 +5,11 @@
 <h1><?= "Hello world!"; ?></h1>
 
 <?php
+
+require('lists.php');
+
+
 $title = "Lecture 1";
-$posts = [
-    [
-        'title' => 'How to learn PHP in right way',
-        'content' => 'This is how you should to learn PHP in right way',
-    ],
-    [
-        'title' => 'How to learn GOLANG in right way',
-        'content' => 'This is how you should to learn GOLANG in right way',
-    ],
-];
 $post = [
     'title' => 'How to learn PHP in right way',
     'content' => 'This is how you should to learn PHP in right way',
@@ -73,3 +67,20 @@ if ($numPosts == 3) {
 <h2><?= $post['content']; ?></h2>
 
 <pre><?php var_dump($posts);?></pre>
+
+<?php for ($i = 0; $i < $numPosts; $i++): ?>
+    <?php if (str_contains($posts[$i]['title'], 'SQL')) {
+        continue;
+    } ?>
+    <h3><?= $posts[$i]['title'] ?></h3>
+    <p><?= $posts[$i]['content'] ?></p>
+<?php endfor; ?>
+
+<?php for ($i = 0; $i < $numPosts; $i++) {
+    echo $posts[$i]['title'];
+    echo $posts[$i]['content'];
+} ?>
+
+<?php
+    echo hello_world_func()
+?>
