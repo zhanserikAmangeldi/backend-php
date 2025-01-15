@@ -6,11 +6,26 @@
 
 <?php
 $title = "Lecture 1";
-$numPosts = 3;
+$posts = [
+    [
+        'title' => 'How to learn PHP in right way',
+        'content' => 'This is how you should to learn PHP in right way',
+    ],
+    [
+        'title' => 'How to learn GOLANG in right way',
+        'content' => 'This is how you should to learn GOLANG in right way',
+    ],
+];
+$post = [
+    'title' => 'How to learn PHP in right way',
+    'content' => 'This is how you should to learn PHP in right way',
+];
+$numPosts = count($posts);
 define("MIN_NUM_POSTS", 0); // constant
 const MAX_NUM_POSTS = 100;
 $hasPosts = $numPosts > MIN_NUM_POSTS;
-$numPostsDisplay = "\"$numPosts\" posts" ;
+$numPostsDisplay = $numPosts == 1 ? "\"$numPosts\" post" : "\"$numPosts\" posts"; ;
+$tags = ['php', 'docker', 'mysql']
 ?>
 
 <h1><?= $title; ?></h1>
@@ -47,3 +62,14 @@ if ($numPosts == 3) {
 
 <?php echo $hasPosts ? 'Post exists' : 'There are no posts'; ?>
 <?php echo ($numPosts == 3) ? 'There are exactly 3 posts' : ($hasPosts ? 'Post exists' : 'There are no posts'); ?>
+<?= ($numPosts == 3) ? 'There are exactly 3 posts' : ($hasPosts ? 'Post exists' : 'There are no posts'); ?>
+
+<?php foreach($tags as $key => $tag) {
+    echo $key + 1 . ": $tag<br/>";
+}
+?>
+
+<h1><?= $post['title']; ?></h1>
+<h2><?= $post['content']; ?></h2>
+
+<pre><?php var_dump($posts);?></pre>
