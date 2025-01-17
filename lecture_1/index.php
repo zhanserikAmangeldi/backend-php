@@ -80,8 +80,26 @@ if ($numPosts == 3) {
 <?php for ($i = 0; $i < $numPosts; $i++) {
     echo $posts[$i]['title'];
     echo $posts[$i]['content'];
-} ?>
+}
+?>
 
 <?php
     echo hello_world_func()
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
