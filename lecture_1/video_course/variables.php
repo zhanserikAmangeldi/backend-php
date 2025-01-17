@@ -1,4 +1,4 @@
-<?php 
+<?php
 $name = 'Zhanserik';
 $age = 19;
 $hobby = 'hiking';
