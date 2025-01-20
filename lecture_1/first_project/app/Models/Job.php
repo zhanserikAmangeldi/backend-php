@@ -22,7 +22,7 @@ class Job{
                 'title' => 'Teacher',
                 'salary' => '$8000',
             ]
-        ];~
+        ];
     }
 
     public static function find (int $id): array{
